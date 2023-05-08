@@ -16,4 +16,9 @@ describe('Classes tests', () => {
         const res = player.getDamage(50);
         expect(res).toBe(50);
     });
+
+    it('Should return 0hp if receive more than 100 damage', () => {
+        const res = player.getDamage(120);
+        expect(res).toBe(0);
+    });
 });
